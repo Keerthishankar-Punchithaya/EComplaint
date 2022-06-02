@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "424503743736",
+    "project_id": "ecomplaint-c1d72",
+    "storage_bucket": "ecomplaint-c1d72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424503743736:android:6b56ccbeb0931dd11a570d",
+        "android_client_info": {
+          "package_name": "com.example.ecomplaint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424503743736-qte7k2boot8cbh3q7h714ads8414l1lg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW4atnXrLDwYMqGLoEtvY-cIsAOWuYJ6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424503743736-qte7k2boot8cbh3q7h714ads8414l1lg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

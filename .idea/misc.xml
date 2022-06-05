@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/notes/EComplaint/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.2555" />
         <entry key="..\:/notes/EComplaint/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/notes/EComplaint/app/src/main/res/layout/activity_registration.xml" value="0.1" />
         <entry key="..\:/notes/EComplaint/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/notes/EComplaint/app/src/main/res/layout/content_registration.xml" value="0.14270833333333333" />
+        <entry key="..\:/notes/EComplaint/app/src/main/res/layout/fragment_first.xml" value="0.14270833333333333" />
+        <entry key="..\:/notes/EComplaint/app/src/main/res/layout/fragment_second.xml" value="0.14270833333333333" />
       </map>
     </option>
   </component>

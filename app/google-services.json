@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "826631028722",
+    "firebase_url": "https://ecomplaintregistration-default-rtdb.firebaseio.com",
+    "project_id": "ecomplaintregistration",
+    "storage_bucket": "ecomplaintregistration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826631028722:android:f137284f7c22188363b56b",
+        "android_client_info": {
+          "package_name": "com.example.ecomplaint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826631028722-nvfs9fj2kr2p4i7uu6u89darpclqln0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4vg4APk0EvScCiPUlT0xRdsRv8CNHDek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826631028722-nvfs9fj2kr2p4i7uu6u89darpclqln0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826631028722:android:bc6e886f1bc79eca63b56b",
+        "android_client_info": {
+          "package_name": "com.example.registration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826631028722-nvfs9fj2kr2p4i7uu6u89darpclqln0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4vg4APk0EvScCiPUlT0xRdsRv8CNHDek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826631028722-nvfs9fj2kr2p4i7uu6u89darpclqln0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -98,8 +98,8 @@ public class SignUp extends AppCompatActivity {
                     databaseReference.push().setValue(emp);
                 }
 
-            }
-        });
+            });
+        }
 
 
     }

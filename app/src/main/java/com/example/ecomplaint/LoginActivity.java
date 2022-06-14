@@ -58,29 +58,45 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(){
-        String email = etLoginEmail.getText().toString();
-        String password = etLoginPassword.getText().toString();
-
+        String email = etLoginEmail.getText().toString().trim();
+        String password = etLoginPassword.getText().toString().trim();
+//        String admin = admin@gmail.com,pass = 'admin';
+//        email = "admin2@gmail.com";
+//        password = "password2";
+        String EAd= new String("admin@gmail.com");
+        String PAd =new String("password");
+        if (email.equals(EAd)) {
+            if(password.equals(PAd))
+            startActivity(new Intent(LoginActivity.this, adminPage.class));
+        } else {
         if (TextUtils.isEmpty(email)){
             etLoginEmail.setError("Email cannot be empty");
             etLoginEmail.requestFocus();
         }else if (TextUtils.isEmpty(password)){
             etLoginPassword.setError("Password cannot be empty");
             etLoginPassword.requestFocus();
-        }else{
+        }else {
+
+//            if (email == "admin2@gmail.com" && password == "password2") {
+//                startActivity(new Intent(LoginActivity.this, adminPage.class));
+//            } else {
 //            this is the extra line added
-            Task<AuthResult> user_logged_in_successfully = mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                Task<AuthResult> user_logged_in_successfully = mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+
+                            Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
+       // }
+    }
     }
 
 }

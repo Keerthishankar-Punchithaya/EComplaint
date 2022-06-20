@@ -1,5 +1,6 @@
 package com.example.ecomplaint;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,7 +21,11 @@ public class RegisterComplaint extends AppCompatActivity {
 
     // creating variables for
     // EditText and buttons.
-    private EditText employeeNameEdt, employeePhoneEdt, employeeAddressEdt;
+    private EditText title;
+    private EditText regno;
+    private EditText name;
+    private EditText incident;
+    private EditText phone;
     private Button sendDatabtn;
 
     // creating a variable for our
@@ -33,7 +38,7 @@ public class RegisterComplaint extends AppCompatActivity {
 
     // creating a variable for
     // our object class
-    ComplaintDetails employeeInfo;
+    ComplaintDetails complaintInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,22 +46,23 @@ public class RegisterComplaint extends AppCompatActivity {
         setContentView(R.layout.activity_register_complaint);
 
         // initializing our edittext and button
-        employeeNameEdt = findViewById(R.id.idEdtEmployeeName);
-        employeePhoneEdt = findViewById(R.id.idEdtEmployeePhoneNumber);
-        employeeAddressEdt = findViewById(R.id.inputComplaintDetails);
+        title = findViewById(R.id.title);
+        phone = findViewById(R.id.phno);
+        name = findViewById(R.id.name);
+        incident = findViewById(R.id.name1);
 
         // below line is used to get the
         // instance of our FIrebase database.
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         // below line is used to get reference for our database.
-        databaseReference = firebaseDatabase.getReference("EmployeeInfo");
+        databaseReference = firebaseDatabase.getReference("ComplaintInfo");
 
         // initializing our object
         // class variable.
-        employeeInfo = new ComplaintDetails();
+        complaintInfo = new ComplaintDetails();
 
-        sendDatabtn = findViewById(R.id.submitComplaintbtn);
+        sendDatabtn = findViewById(R.id.submitbtn);
 
         // adding on click listener for our button.
         sendDatabtn.setOnClickListener(new View.OnClickListener() {
@@ -64,20 +70,23 @@ public class RegisterComplaint extends AppCompatActivity {
             public void onClick(View v) {
 
                 // getting text from our edittext fields.
-                String name = employeeNameEdt.getText().toString();
-                String phone = employeePhoneEdt.getText().toString();
-                String address = employeeAddressEdt.getText().toString();
+                String title = title.getText().toString();
+                String phone = phone.getText().toString();
+                String name = name.getText().toString();
+                String incident = incident.getText().toString();
 
                 // below line is for checking weather the
                 // edittext fields are empty or not.
-                if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(address)) {
+                if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phno) && TextUtils.isEmpty(title) && TextUtils.isEmpty(incident)) {
                     // if the text fields are empty
                     // then show the below message.
                     Toast.makeText(RegisterComplaint.this, "Please add some data.", Toast.LENGTH_SHORT).show();
                 } else {
                     // else call the method to add
                     // data to our database.
-                    addDatatoFirebase(name, phone, address);
+                    addDatatoFirebase(title,phno,name,incident);
+                    //move to home fragment
+                    startActivity(new Intent(RegisterComplaint.this, HomeFragment.class));
                 }
             }
         });
@@ -86,9 +95,10 @@ public class RegisterComplaint extends AppCompatActivity {
     private void addDatatoFirebase(String name, String phone, String address) {
         // below 3 lines of code is used to set
         // data in our object class.
-        employeeInfo.setEmployeeName(name);
-        employeeInfo.setEmployeeContactNumber(phone);
-        employeeInfo.setEmployeeAddress(address);
+        complaintInfo.setTitle(title);
+        complaintInfo.setPhoneNumber(phone);
+        complaintInfo.setName(name);
+        complaintInfo.setComplaint(incident);
 
         // we are use add value event listener method
         // which is called with database reference.
@@ -98,7 +108,7 @@ public class RegisterComplaint extends AppCompatActivity {
                 // inside the method of on Data change we are setting
                 // our object class to our database reference.
                 // data base reference will sends data to firebase.
-                databaseReference.setValue(employeeInfo);
+                databaseReference.setValue(complaintInfo);
 
                 // after adding this data we are showing toast message.
                 Toast.makeText(RegisterComplaint.this, "data added", Toast.LENGTH_SHORT).show();

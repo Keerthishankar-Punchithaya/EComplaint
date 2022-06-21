@@ -19,7 +19,7 @@ import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ComplaintDetailsFragment#newInstance} factory method to
+// * Use the  factory method to
  * create an instance of this fragment.
  */
 public class DisplayComplaintDetails extends BottomSheetDialogFragment {

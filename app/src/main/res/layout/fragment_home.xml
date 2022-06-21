@@ -21,8 +21,12 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="414dp"
-        android:layout_height="737dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView5"
@@ -62,8 +66,8 @@
         android:layout_marginBottom="24dp"
         android:clickable="true"
         android:tint="@android:color/white"
-        app:fabCustomSize="70dp"
         android:visibility="invisible"
+        app:fabCustomSize="70dp"
         app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
         app:srcCompat="@drawable/ic_baseline_create_24" />
@@ -80,7 +84,6 @@
         app:layout_constraintBottom_toTopOf="@+id/registerbutton"
         app:layout_constraintEnd_toEndOf="@+id/registerbutton"
         app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,7 +38,7 @@ public class RegisterComplaint extends AppCompatActivity {
 
     // creating a variable for
     // our object class
-    ComplaintDetails complaintInfo= new ComplaintDetails();
+    ComplaintDetails complaintInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +77,15 @@ public class RegisterComplaint extends AppCompatActivity {
 
                 // below line is for checking weather the
                 // edittext fields are empty or not.
-                if (TextUtils.isEmpty(Name) && TextUtils.isEmpty(Phone) && TextUtils.isEmpty(Title) && TextUtils.isEmpty(Incident)) {
+                if (TextUtils.isEmpty(Name) || TextUtils.isEmpty(Phone) || TextUtils.isEmpty(Title) || TextUtils.isEmpty(Incident)) {
                     // if the text fields are empty
                     // then show the below message.
                     Toast.makeText(RegisterComplaint.this, "Please add some data.", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else {
                     // else call the method to add
                     // data to our database.
-                    addDatatoFirebase(Title,Phone,Name,Incident);
+                    addDataFirebase(Title,Phone,Name,Incident);
                     //move to home fragment
                     startActivity(new Intent(RegisterComplaint.this, HomeFragment.class));
                 }
@@ -92,13 +93,13 @@ public class RegisterComplaint extends AppCompatActivity {
         });
     }
 
-    private void addDatatoFirebase(String title, String phone, String name, String incident) {
+    private void addDataFirebase(String Dtitle, String Dphone, String Dname, String Dincident) {
         // below 3 lines of code is used to set
         // data in our object class.
-        complaintInfo.setTitle(title);
-        complaintInfo.setPhoneNumber(phone);
-        complaintInfo.setName(name);
-        complaintInfo.setComplaint(incident);
+        complaintInfo.setTitle(Dtitle);
+        complaintInfo.setPhoneNumber(Dphone);
+        complaintInfo.setName(Dname);
+        complaintInfo.setComplaint(Dincident);
 
         // we are use add value event listener method
         // which is called with database reference.

@@ -115,7 +115,7 @@ public class HomeFragment extends Fragment {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     ComplaintDetails complaint=dataSnapshot.getValue(ComplaintDetails.class);
 
-                    if(complaint.getComplaintFrom().getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
+                    if(complaint.getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
                         arrayList.add(complaint);
                     }
 
@@ -139,7 +139,7 @@ public class HomeFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ComplaintDetails present = (ComplaintDetails) arrayList.get(position);
                 DisplayComplaintDetails complaintDetailsFragment= new DisplayComplaintDetails(present);
-                DisplayComplaintDetails.show(((FragmentActivity)getContext()).getSupportFragmentManager(), getTag());
+                complaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), getTag());
                 //Toast.makeText(getContext(), "hii", Toast.LENGTH_SHORT).show();
             }
         });

@@ -33,7 +33,7 @@ public class DisplayComplaintDetails extends BottomSheetDialogFragment {
     private String mParam1;
     private String mParam2;
 
-    ComplaintDetails present;
+    ComplaintDetails present= new ComplaintDetails();
 
 
 
@@ -98,7 +98,7 @@ public class DisplayComplaintDetails extends BottomSheetDialogFragment {
         incident.setText(present.getComplaint());
 
         TextView ComplaintFrom=view.findViewById(R.id.complaintFrom);
-        ComplaintFrom.setText(present.getComplaintFrom().getName());
+        ComplaintFrom.setText(present.getName());
 
         TextView status=view.findViewById(R.id.details_status);
         status.setText(present.getStatus().toUpperCase(Locale.ROOT));
@@ -107,12 +107,9 @@ public class DisplayComplaintDetails extends BottomSheetDialogFragment {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         Log.i("this",currentUser.getDisplayName());
 
-        //HomeFragment.arrayList.clear();
-        //HomeFragment.adapter.notifyDataSetChanged();
-
-
-
-
+        //
+        HomeFragment.arrayList.clear();
+        HomeFragment.adapter.notifyDataSetChanged();
 
     }
 }

@@ -38,7 +38,7 @@ public class RegisterComplaint extends AppCompatActivity {
 
     // creating a variable for
     // our object class
-    ComplaintDetails complaintInfo;
+    ComplaintDetails complaintInfo= new ComplaintDetails();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,21 +70,21 @@ public class RegisterComplaint extends AppCompatActivity {
             public void onClick(View v) {
 
                 // getting text from our edittext fields.
-                String title = title.getText().toString();
-                String phone = phone.getText().toString();
-                String name = name.getText().toString();
-                String incident = incident.getText().toString();
+                String Title = title.getText().toString();
+                String Phone = phone.getText().toString();
+                String Name = name.getText().toString();
+                String Incident = incident.getText().toString();
 
                 // below line is for checking weather the
                 // edittext fields are empty or not.
-                if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phno) && TextUtils.isEmpty(title) && TextUtils.isEmpty(incident)) {
+                if (TextUtils.isEmpty(Name) && TextUtils.isEmpty(Phone) && TextUtils.isEmpty(Title) && TextUtils.isEmpty(Incident)) {
                     // if the text fields are empty
                     // then show the below message.
                     Toast.makeText(RegisterComplaint.this, "Please add some data.", Toast.LENGTH_SHORT).show();
                 } else {
                     // else call the method to add
                     // data to our database.
-                    addDatatoFirebase(title,phno,name,incident);
+                    addDatatoFirebase(Title,Phone,Name,Incident);
                     //move to home fragment
                     startActivity(new Intent(RegisterComplaint.this, HomeFragment.class));
                 }
@@ -92,7 +92,7 @@ public class RegisterComplaint extends AppCompatActivity {
         });
     }
 
-    private void addDatatoFirebase(String name, String phone, String address) {
+    private void addDatatoFirebase(String title, String phone, String name, String incident) {
         // below 3 lines of code is used to set
         // data in our object class.
         complaintInfo.setTitle(title);

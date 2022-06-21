@@ -32,12 +32,12 @@ public class ComplaintDetails {
         return title;
     }
 
-    public com.google.firebase.firestore.auth.User getComplaintFrom() {
-        return complaintFrom;
-    }
-    public void setComplaintFrom() {
-        this.complaintFrom=complaintFrom;
-    }
+//    public com.google.firebase.firestore.auth.User getComplaintFrom() {
+//        return complaintFrom;
+//    }
+//    public void setComplaintFrom() {
+//        this.complaintFrom=complaintFrom;
+//    }
 
     public void setTitle(String title) {
         this.title = title;

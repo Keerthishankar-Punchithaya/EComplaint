@@ -1,10 +1,12 @@
 package com.example.ecomplaint;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,7 +22,7 @@ public class Register extends AppCompatActivity {
 
 
     EditText name,password,email;
-    Button register;
+    TextView register,back;
     private FirebaseAuth mAuth;
     FirebaseDatabase database;
 
@@ -31,9 +33,10 @@ public class Register extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        name=findViewById(R.id.RegisterName);
+        name=findViewById(R.id.RegisterEmail);
         email=findViewById(R.id.RegisterEmail);
         password=findViewById(R.id.RegisterPassword);
+        back=findViewById(R.id.back);
 
          database = FirebaseDatabase.getInstance();
 
@@ -99,6 +102,27 @@ public class Register extends AppCompatActivity {
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Register.this, MainActivity.class));
+            }
+        });
 
+
+    }
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 }

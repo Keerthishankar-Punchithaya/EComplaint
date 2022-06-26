@@ -2,11 +2,11 @@ package com.example.ecomplaint;
 
 public class Complaint {
 
-    String complaintID,title,name,regno,incident_info,status;
+    String complaintID,title,name,regno,incident_info,status,email;
 
     //String complaintFrom="akhil";
 
-    Expert expert;
+//    Expert expert;
 
     com.example.ecomplaint.User complaintFrom;
 
@@ -87,13 +87,19 @@ public class Complaint {
         this.status = status;
     }
 
-    public void setExpert(Expert expert) {
-        this.expert = expert;
+    public String getEmail() { return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Expert getExpert() {
-        return expert;
-    }
+//    public void setExpert(Expert expert) {
+//        this.expert = expert;
+//    }
+//
+//    public Expert getExpert() {
+//        return expert;
+//    }
 }
 
 

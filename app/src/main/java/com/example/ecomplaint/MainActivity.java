@@ -106,14 +106,14 @@ public class MainActivity extends AppCompatActivity {
 
                         if(task.isSuccessful()){
 
-                            FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+//                            FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
 
 //                            if(user.isEmailVerified()){
                             String EAd= new String("admin@gmail.com");
                             String PAd =new String("password");
                             if (email.equals(EAd)) {
                                 if(password.equals(PAd))
-                                    startActivity(new Intent(MainActivity.this, com.example.ecomplaint.adminPage.class));
+                                    startActivity(new Intent(MainActivity.this, adminPage.class));
                             } else {
                                 Intent i = new Intent(getApplicationContext(),MainPage.class);
                                 startActivity(i);

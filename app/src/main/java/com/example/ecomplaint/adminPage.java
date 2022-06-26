@@ -1,5 +1,6 @@
 package com.example.ecomplaint;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -127,8 +128,8 @@ public class adminPage extends Fragment {
                     FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
 
                     Log.i("value",firebaseAuth.getCurrentUser().getEmail());
-                    Log.i("value",complaint.getExpert().getEmail());
-                    if(complaint.getExpert().getEmail().equals(firebaseAuth.getCurrentUser().getEmail())){
+                    Log.i("value",complaint.getEmail());
+                    if(complaint.getEmail().equals(firebaseAuth.getCurrentUser().getEmail())){
                         arrayList.add(complaint);
                     }
                 }
@@ -159,6 +160,7 @@ public class adminPage extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getContext(), MainActivity.class));
 //                SettingDetailsFragment settingDetailsFragment= new SettingDetailsFragment();
 //                settingDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), settingDetailsFragment.getTag());
             }
@@ -169,6 +171,7 @@ public class adminPage extends Fragment {
 
 
     }
+
 
 
 }

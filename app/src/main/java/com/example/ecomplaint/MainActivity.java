@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                             String PAd =new String("password");
                             if (email.equals(EAd)) {
                                 if(password.equals(PAd))
-                                    startActivity(new Intent(MainActivity.this, adminPage.class));
+                                    startActivity(new Intent(MainActivity.this, com.example.ecomplaint.adminPage.class));
                             } else {
                                 Intent i = new Intent(getApplicationContext(),MainPage.class);
                                 startActivity(i);

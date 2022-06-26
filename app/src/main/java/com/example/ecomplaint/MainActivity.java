@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         //rootNode = FirebaseDatabase.getInstance();
 
-        editTextName=findViewById(R.id.RegisterEmail);
+        editTextName=findViewById(R.id.RegisterName);
 
         editTextPassword=findViewById(R.id.RegisterPassword);
 

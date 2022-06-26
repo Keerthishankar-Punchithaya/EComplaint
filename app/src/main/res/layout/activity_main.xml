@@ -39,7 +39,7 @@
             <!-- INPUT -->
 
             <EditText
-                android:id="@+id/RegisterEmail"
+                android:id="@+id/RegisterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/username_icon"

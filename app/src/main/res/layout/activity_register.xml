@@ -41,14 +41,14 @@
 
 
             <EditText
-                android:id="@+id/RegisterEmail"
+                android:id="@+id/RegisterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/username_icon"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="Name"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:maxLines="1"
                 android:paddingLeft="17dp"
                 android:paddingTop="15dp"
@@ -80,7 +80,7 @@
 
 
             <EditText
-                android:id="@+id/RegisterEmail"
+                android:id="@+id/RegisterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/username_icon"

@@ -57,7 +57,7 @@
                 android:layout_width="33dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Student Name "
+                android:text="Address"
                 android:textAlignment="viewEnd"
                 android:textSize="20sp" />
 
@@ -81,7 +81,7 @@
                 android:layout_width="33dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Reg No"
+                android:text="Phone No."
                 android:textAlignment="viewEnd"
                 android:textSize="20sp" />
 
@@ -105,7 +105,7 @@
                 android:layout_width="33dp"
                 android:layout_height="56dp"
                 android:layout_weight="1"
-                android:text="Incident Info"
+                android:text="Complaint Details"
                 android:textAlignment="viewEnd"
                 android:textSize="20sp" />
 
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:background="#DF29422A"
-                android:text="Complaint handled by "
+                android:text="EComplaint "
                 android:textAlignment="center"
                 android:textColor="#F6F6F6" />
         </LinearLayout>

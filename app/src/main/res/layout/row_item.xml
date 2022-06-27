@@ -58,9 +58,9 @@
             android:layout_weight="1"
             android:background="#ABECE4"
             android:backgroundTint="#D6F1EC"
-            android:tint="#711D1D"
             android:focusable="false"
-            app:srcCompat="@drawable/ic_baseline_chat_24" />
+            android:tint="#711D1D"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
         <TextView
             android:id="@+id/row_status"

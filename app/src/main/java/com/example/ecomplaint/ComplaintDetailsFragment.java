@@ -102,7 +102,7 @@ public class ComplaintDetailsFragment extends BottomSheetDialogFragment {
         status.setText(present.getStatus().toUpperCase(Locale.ROOT));
 
         TextView expert=view.findViewById(R.id.details_expert);
-        expert.setText("Complaint handled by officer");
+        expert.setText("EComplaint");
 
 
         FirebaseUser currentUser = mAuth.getCurrentUser();

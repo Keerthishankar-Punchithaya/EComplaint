@@ -48,7 +48,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="RegNo" />
+                android:text="Phone No" />
 
             <EditText
                 android:id="@+id/regno"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Regno"
+                android:hint="Phone No"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -72,7 +72,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Name" />
+                android:text="Address" />
 
             <EditText
                 android:id="@+id/name"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="Address"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -96,7 +96,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Incident" />
+                android:text="Complaints" />
 
             <EditText
                 android:id="@+id/name1"

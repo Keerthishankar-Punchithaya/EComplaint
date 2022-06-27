@@ -26,7 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     DatabaseReference reference;
     DatabaseReference referenceExpert;
 
-    ArrayList<Expert> expertList;
+//    ArrayList<Expert> expertList;
 
     User user;
 
@@ -47,7 +47,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
 
-        expertList= new ArrayList<>();
+//        expertList= new ArrayList<>();
 
 
         Button button=(Button) findViewById(R.id.button);

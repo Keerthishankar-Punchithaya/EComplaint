@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class AdminHomeFragment extends Fragment {
 
     ListView listview;
     public static ArrayList arrayList;
@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home,container,false);
+        return inflater.inflate(R.layout.fragment_admin_home,container,false);
     }
 
     @Override
@@ -110,14 +110,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(!arrayList.isEmpty()){
-                        arrayList.clear();
-                    }
+                    arrayList.clear();
+                }
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Complaint complaint=dataSnapshot.getValue(Complaint.class);
 
-                    if(complaint.getComplaintFrom().getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
+//                    if(complaint.getComplaintFrom().getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
+                    //get all users complaint
                         arrayList.add(complaint);
-                    }
+//                    }
 
                     adapter.notifyDataSetChanged();
                     listview.requestLayout();
@@ -138,8 +139,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Complaint present = (Complaint) arrayList.get(position);
-                AdminComplaintDetailsFragment complaintDetailsFragment= new AdminComplaintDetailsFragment(present);
-                complaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), complaintDetailsFragment.getTag());
+                AdminComplaintDetailsFragment admincomplaintDetailsFragment= new AdminComplaintDetailsFragment(present);
+                AdminComplaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), admincomplaintDetailsFragment.getTag());
                 //Toast.makeText(getContext(), "hii", Toast.LENGTH_SHORT).show();
             }
         });

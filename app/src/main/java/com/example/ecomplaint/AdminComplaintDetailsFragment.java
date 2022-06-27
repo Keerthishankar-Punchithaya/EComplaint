@@ -63,8 +63,8 @@ public class AdminComplaintDetailsFragment extends BottomSheetDialogFragment {
      * @return A new instance of fragment ComplaintDetailsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ComplaintDetailsFragment newInstance(String param1, String param2) {
-        ComplaintDetailsFragment fragment = new ComplaintDetailsFragment();
+    public static AdminComplaintDetailsFragment newInstance(String param1, String param2) {
+        AdminComplaintDetailsFragment fragment = new AdminComplaintDetailsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

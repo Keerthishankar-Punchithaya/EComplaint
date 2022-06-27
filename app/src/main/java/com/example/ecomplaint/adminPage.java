@@ -33,7 +33,7 @@ public class adminPage extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         VPAdapter vpAdapter= new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new com.example.ecomplaint.HomeFragment(),"Complaints");
+        vpAdapter.addFragment(new com.example.ecomplaint.AdminHomeFragment(),"Complaints");
         vpAdapter.addFragment(new AboutFragment(),"about");
 
         //Log.i("this", FirebaseAuth.getInstance().getCurrentUser().to);

@@ -140,7 +140,7 @@ public class AdminHomeFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Complaint present = (Complaint) arrayList.get(position);
                 AdminComplaintDetailsFragment admincomplaintDetailsFragment= new AdminComplaintDetailsFragment(present);
-                AdminComplaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), admincomplaintDetailsFragment.getTag());
+                admincomplaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), admincomplaintDetailsFragment.getTag());
                 //Toast.makeText(getContext(), "hii", Toast.LENGTH_SHORT).show();
             }
         });

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         login=findViewById(R.id.registerAccount);
 
 
-        register=findViewById(R.id.back);
+        register=findViewById(R.id.back1);
 
         mAuth=FirebaseAuth.getInstance();
 
@@ -110,9 +110,9 @@ public class MainActivity extends AppCompatActivity {
 //                            if(user.isEmailVerified()){
                             String EAd= new String("admin@gmail.com");
                             String PAd =new String("password");
-                            if (email.equals(EAd)) {
-                                if(password.equals(PAd))
-                                    startActivity(new Intent(MainActivity.this, adminPage.class));
+                            if (email.equals(EAd) && password.equals(PAd)) {
+
+                                    startActivity(new Intent(getApplicationContext(), adminPage.class));
                             } else {
                                 Intent i = new Intent(getApplicationContext(),MainPage.class);
                                 startActivity(i);

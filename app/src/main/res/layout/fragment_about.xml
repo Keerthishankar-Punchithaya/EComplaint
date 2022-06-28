@@ -24,13 +24,13 @@
         android:id="@+id/textView12"
         android:layout_width="346dp"
         android:layout_height="341dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        android:text="EComplaint is the app used for registering general complaints on any locality to the municipal oficers. This app was developed to reduce the paper work and hassel in the government offices.  App developed by Keerthishankar Punchithaya and Anirudh Nayak"
         android:textAlignment="inherit"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.246" />
 </androidx.constraintlayout.widget.ConstraintLayout>

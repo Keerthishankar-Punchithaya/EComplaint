@@ -138,7 +138,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Complaint present = (Complaint) arrayList.get(position);
-                AdminComplaintDetailsFragment complaintDetailsFragment= new AdminComplaintDetailsFragment(present);
+                ComplaintDetailsFragment complaintDetailsFragment= new ComplaintDetailsFragment(present);
                 complaintDetailsFragment.show(((FragmentActivity)getContext()).getSupportFragmentManager(), complaintDetailsFragment.getTag());
                 //Toast.makeText(getContext(), "hii", Toast.LENGTH_SHORT).show();
             }

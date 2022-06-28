@@ -31,7 +31,7 @@ public class AdminComplaintDetailsFragment extends BottomSheetDialogFragment {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
-    String[] items =  {"Under investigation","Reviewing complaint","Investigation complete","Case Closed"};
+    String[] items =  {"Processing","Reviewing complaint","Solved","Case Closed"};
     AutoCompleteTextView autoCompleteTxt;
     ArrayAdapter<String> adapterItems;
 
@@ -85,7 +85,7 @@ public class AdminComplaintDetailsFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_complaint_details, container, false);
+        return inflater.inflate(R.layout.fragment_admin_complaint_details, container, false);
     }
 
     @Override
@@ -127,6 +127,8 @@ public class AdminComplaintDetailsFragment extends BottomSheetDialogFragment {
         autoCompleteTxt = view.findViewById(R.id.auto_complete_txt);
 
         adapterItems = new ArrayAdapter<String>(getContext(),R.layout.list_item,items);
+//        autoCompleteTxt.setAdapter(adapterItems);
+        autoCompleteTxt.setThreshold(1);
         autoCompleteTxt.setAdapter(adapterItems);
 
         autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {

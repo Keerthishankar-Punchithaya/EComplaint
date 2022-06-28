@@ -73,7 +73,8 @@ public class AdminHomeFragment extends Fragment {
         mainbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animatefab();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getContext(),MainActivity.class));
 
             }
         });
@@ -105,7 +106,6 @@ public class AdminHomeFragment extends Fragment {
         listview.setAdapter(adapter);
         simpleProgressBar.setVisibility(View.VISIBLE);
 
-        //arrayList.add(new Complaint("123","this is title","akhil","19bce1564","ragging","rahul","registered"));
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -115,10 +115,8 @@ public class AdminHomeFragment extends Fragment {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Complaint complaint=dataSnapshot.getValue(Complaint.class);
 
-//                    if(complaint.getComplaintFrom().getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
-                    //get all users complaint
+
                         arrayList.add(complaint);
-//                    }
 
                     adapter.notifyDataSetChanged();
                     listview.requestLayout();

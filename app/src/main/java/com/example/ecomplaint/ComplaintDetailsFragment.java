@@ -1,6 +1,8 @@
 package com.example.ecomplaint;
 
-import android.content.Intent;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -32,9 +34,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Locale;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ComplaintDetailsFragment#newInstance} factory method to
@@ -253,7 +252,18 @@ public class ComplaintDetailsFragment extends BottomSheetDialogFragment {
         canvas.drawText("Registered By: "+present.getComplaintFrom().getName(), 396, 660, title);
         canvas.drawText("Status: "+present.getStatus().toUpperCase(Locale.ROOT), 396, 680, title);
 
+//        Table table = new Table(2);
+//        table.addCell(new Cell().add("Name"));
+//        table.addCell(new Cell().add("Raju"));
+//        table.addCell(new Cell().add("Id"));
+//        table.addCell(new Cell().add("1001"));
+//        table.addCell(new Cell().add("Designation"));
+//        table.addCell(new Cell().add("Programmer"));
+//        pdfDocument.add(table);
 
+        // Creating a table object
+//        float [] pointColumnWidths = {150F, 150F, 150F};
+//        Table table = new Table(pointColumnWidths);
 
 
 

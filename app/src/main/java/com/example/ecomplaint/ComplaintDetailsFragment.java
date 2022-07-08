@@ -243,7 +243,7 @@ public class ComplaintDetailsFragment extends BottomSheetDialogFragment {
         // below line is used for setting
         // our text to center of PDF.
         title.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("This is sample document which we have created.", 396, 560, title);
+        canvas.drawText("Complaint details:", 396, 560, title);
 
         canvas.drawText("Title: "+present.getTitle(), 396, 580, title);
         canvas.drawText("Address: "+present.getName(), 396, 600, title);
@@ -252,24 +252,7 @@ public class ComplaintDetailsFragment extends BottomSheetDialogFragment {
         canvas.drawText("Registered By: "+present.getComplaintFrom().getName(), 396, 660, title);
         canvas.drawText("Status: "+present.getStatus().toUpperCase(Locale.ROOT), 396, 680, title);
 
-//        Table table = new Table(2);
-//        table.addCell(new Cell().add("Name"));
-//        table.addCell(new Cell().add("Raju"));
-//        table.addCell(new Cell().add("Id"));
-//        table.addCell(new Cell().add("1001"));
-//        table.addCell(new Cell().add("Designation"));
-//        table.addCell(new Cell().add("Programmer"));
-//        pdfDocument.add(table);
 
-        // Creating a table object
-//        float [] pointColumnWidths = {150F, 150F, 150F};
-//        Table table = new Table(pointColumnWidths);
-
-
-
-
-        // after adding all attributes to our
-        // PDF file we will be finishing our page.
         pdfDocument.finishPage(myPage);
 
         // below line is used to set the name of

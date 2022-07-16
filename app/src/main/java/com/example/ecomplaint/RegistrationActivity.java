@@ -26,11 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     DatabaseReference reference;
     DatabaseReference referenceExpert;
 
-//    ArrayList<Expert> expertList;
-
     User user;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
